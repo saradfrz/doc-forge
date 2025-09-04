@@ -52,9 +52,14 @@ start = 1 + delta
 end = 21 + delta
 document_manipulator.get_text_from_pdf(start, end)
 ```
+---
 
-Extract text from a range of pages in a EPUB file
+Extract all chapters from an EPUB file
 
 ```python
-
+    for x in range(7, 26):
+        document_manipulator.get_text_from_epub(x, x+1)
 ```
+
+---
+

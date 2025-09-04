@@ -51,8 +51,7 @@ class DocumentManipulator():
 
 if __name__ == '__main__':
     document_manipulator = DocumentManipulator()
-    delta = 7
-    start = 1 + delta
-    end = 21 + delta
-    document_manipulator.get_text_from_pdf(start, end)
+
+    for x in range(7, 26):
+        document_manipulator.get_text_from_epub(x, x+1)
 

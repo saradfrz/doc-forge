@@ -3,6 +3,8 @@ from app.pdf_reader import PDFReader
 from app.epub_reader import EPUBReader
 from app.text_splitter import TextSlpitter
 
+from app.prompt_creator import PromptCreator
+
 import re
 
 class DocumentManipulator():
@@ -50,8 +52,10 @@ class DocumentManipulator():
 
 
 if __name__ == '__main__':
-    document_manipulator = DocumentManipulator()
+    filepath = 'input\\medallion_ch03.txt'
+    output_folder = 'medallion_prompts'
+    prompt_path = 'prompts\\ellaborate_questions.txt'
 
-    for x in range(7, 26):
-        document_manipulator.get_text_from_epub(x, x+1)
+    prompt_creator = PromptCreator(filepath, output_folder, prompt_path)
+    prompt_creator.create_prompts()
 

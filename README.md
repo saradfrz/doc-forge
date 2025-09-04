@@ -46,20 +46,29 @@ monstrinho/
 Extract text from a range of pages in a PDF
 
 ```python
-document_manipulator = DocumentManipulator()
-delta = 7
-start = 1 + delta
-end = 21 + delta
-document_manipulator.get_text_from_pdf(start, end)
+  document_manipulator = DocumentManipulator()
+  delta = 7
+  start = 1 + delta
+  end = 21 + delta
+  document_manipulator.get_text_from_pdf(start, end)
 ```
 ---
 
 Extract all chapters from an EPUB file
 
 ```python
-    for x in range(7, 26):
-        document_manipulator.get_text_from_epub(x, x+1)
+  for x in range(7, 26):
+      document_manipulator.get_text_from_epub(x, x+1)
 ```
 
 ---
+
+Create writing exercise from corpus
+
+```python
+  prompt_path = 'prompts\\ellaborate_questions.txt'
+
+  prompt_creator = PromptCreator(filepath, output_folder, prompt_path)
+  prompt_creator.create_prompts()
+```
 
